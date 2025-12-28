@@ -1,4 +1,9 @@
-import { FaInstagram, FaLinkedin, FaMapMarkerAlt, FaYoutube } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaYoutube,
+} from 'react-icons/fa';
 
 function ContactSection() {
   return (
@@ -26,7 +31,7 @@ function ContactSection() {
             <h3>Business address</h3>
             <p>6th Cross malleshwaram, Bangalore 5600003</p>
           </div>
-          <div className="contact-card">
+          <div className="contact-card accent">
             <h3>Contact details</h3>
             <p>
               📧 <a href="mailto:mpsvco@gmail.com">mpsvco@gmail.com</a>

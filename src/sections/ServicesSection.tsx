@@ -37,14 +37,6 @@ function ServicesSection() {
           </a>
         </article>
       </div>
-      <div className="service-note">
-        <p>
-          Outcomes: High quality of service and measurable value addition.
-          Documents are collected after the first discussion. Timelines and
-          pricing vary by file and requirements. Delivery mode: remote,
-          in-person, or hybrid.
-        </p>
-      </div>
     </section>
   );
 }

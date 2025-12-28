@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  font-family: "Work Sans", "Segoe UI", sans-serif;
+  font-family: 'Work Sans', 'Segoe UI', sans-serif;
   line-height: 1.6;
   font-weight: 400;
   color: #2a2a22;
@@ -10,16 +10,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --serif: "Cormorant Garamond", "Times New Roman", serif;
+  --serif: 'Cormorant Garamond', 'Times New Roman', serif;
   --ink-900: #2a2a22;
   --ink-700: #4a473c;
   --ink-500: #7a7362;
   --ink-300: #c7bfad;
   --accent: #c9bb7c;
-  --accent-dark: #a79652;
+  --accent-dark: #b39c43;
   --surface-900: #fbf7f0;
-  --surface-800: #f2ece3;
-  --surface-700: #e7dfd3;
+  --surface-800: #ebe3d7;
   --text-primary: var(--ink-900);
   --text-secondary: var(--ink-700);
   --text-muted: var(--ink-500);
@@ -29,21 +28,16 @@
   --button-text: #2a2a22;
   --button-border: var(--accent);
   --card-bg: var(--surface-800);
-  --card-border: rgba(201, 187, 124, 0.2);
-  --page-bg: radial-gradient(
-    circle at top,
-    #f6f0e7 0%,
-    #fbf7f0 45%,
-    #ffffff 100%
-  );
-  --header-bg: rgba(251, 247, 240, 0.92);
+  --card-border: rgba(54, 52, 44, 0.2);
+  --page-bg: var(--surface-900);
+  --header-bg: var(--surface-900);
   --section-alt-bg: var(--surface-800);
-  --contact-bg: radial-gradient(circle at top left, #ffffff 0%, #f4ede2 100%);
+  --contact-bg: var(--surface-800);
   --shadow-soft: 0 14px 24px rgba(42, 42, 34, 0.08);
   --shadow-strong: 0 20px 40px rgba(42, 42, 34, 0.08);
   --accent-surface: #efe5cc;
   --input-bg: #ffffff;
-  --band-bg: var(--surface-700);
+  --band-bg: var(--surface-800);
 }
 
 *,

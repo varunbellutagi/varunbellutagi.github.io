@@ -1,4 +1,14 @@
 function AboutSection() {
+  const industries = [
+    { name: 'Manufacturing', meta: '5+ clients · 1+ yrs' },
+    { name: 'Technology', meta: '5+ clients · 1+ yrs' },
+    { name: 'Healthcare', meta: '5+ clients · 1+ yrs' },
+    { name: 'Logistics', meta: '5+ clients · 1+ yrs' },
+    { name: 'Financial Services', meta: '5+ clients · 1+ yrs' },
+    { name: 'Hospitality', meta: '5+ clients · 1+ yrs' },
+    { name: 'Education', meta: '5+ clients · 1+ yrs' },
+  ];
+
   return (
     <section id="about" className="section alt">
       <div className="section-header">
@@ -52,11 +62,14 @@ function AboutSection() {
         </article>
       </div>
       <div className="industry-band">
-        <span>Industries served</span>
-        <p>
-          Manufacturing · Technology · Healthcare · Real Estate · Logistics ·
-          Financial Services · Hospitality · Education
-        </p>
+        <div className="industry-list">
+          {industries.map((industry) => (
+            <div className="industry-item" key={industry.name}>
+              <span className="industry-name">{industry.name}</span>
+              <span className="industry-meta">{industry.meta}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

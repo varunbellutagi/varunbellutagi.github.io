@@ -316,14 +316,17 @@
 }
 
 .service-card,
-.about-card,
-.case-card,
-.resource-card,
-.faq-card {
+.case-card {
   padding: 2rem;
   border-radius: 20px;
   border: 1px solid var(--card-border);
   background: var(--card-bg);
+}
+
+.service-card:hover,
+.case-card:hover {
+  border-color: var(--accent-dark);
+  box-shadow: 0 18px 28px rgba(9, 9, 0, 0.12);
 }
 
 .faq-groups {
@@ -415,6 +418,11 @@
   color: var(--text-muted);
 }
 
+.partner-card:hover {
+  border-color: var(--accent-dark);
+  box-shadow: 0 18px 28px rgba(9, 9, 0, 0.12);
+}
+
 .blog-card {
   padding: 2rem;
   border-radius: 20px;
@@ -492,21 +500,68 @@
 
 .industry-band {
   margin-top: 2.5rem;
-  padding: 1.5rem 2rem;
-  border-radius: 18px;
-  background: var(--band-bg);
-  color: var(--text-primary);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: var(--surface-800);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
 }
 
-.industry-band span {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.75rem;
+.industry-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.industry-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid rgba(43, 40, 29, 0.35);
+  min-width: 150px;
+  transition: border-color 0.2s ease-out, transform 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+}
+
+.industry-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: transform 0.2s ease-out;
+}
+
+.industry-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, opacity 0.2s ease-out,
+    transform 0.2s ease-out;
+}
+
+.industry-item:hover {
+  border-color: var(--accent-dark);
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.industry-item:hover .industry-name {
+  transform: translateY(4px);
+}
+
+.industry-item:hover .industry-meta {
+  max-height: 40px;
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+.industry-band p {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .pill {
@@ -536,7 +591,7 @@
 
 .contact-card:hover {
   border-color: var(--accent-dark);
-  box-shadow: 0 18px 28px rgba(42, 42, 34, 0.12);
+  box-shadow: 0 18px 28px rgba(9, 9, 0, 0.12);
 }
 
 .contact-card.accent {
