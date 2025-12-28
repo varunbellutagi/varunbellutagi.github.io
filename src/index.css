@@ -1,68 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@300;400;500;600&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Work Sans", "Segoe UI", sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: #2a2a22;
+  background-color: #fbf7f0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --serif: "Cormorant Garamond", "Times New Roman", serif;
+  --ink-900: #2a2a22;
+  --ink-700: #4a473c;
+  --ink-500: #7a7362;
+  --ink-300: #c7bfad;
+  --accent: #c9bb7c;
+  --accent-dark: #a79652;
+  --surface-900: #fbf7f0;
+  --surface-800: #f2ece3;
+  --surface-700: #e7dfd3;
+  --text-primary: var(--ink-900);
+  --text-secondary: var(--ink-700);
+  --text-muted: var(--ink-500);
+  --link-color: var(--ink-900);
+  --link-accent: var(--accent);
+  --button-bg: var(--accent);
+  --button-text: #2a2a22;
+  --button-border: var(--accent);
+  --card-bg: var(--surface-800);
+  --card-border: rgba(201, 187, 124, 0.2);
+  --page-bg: radial-gradient(
+    circle at top,
+    #f6f0e7 0%,
+    #fbf7f0 45%,
+    #ffffff 100%
+  );
+  --header-bg: rgba(251, 247, 240, 0.92);
+  --section-alt-bg: var(--surface-800);
+  --contact-bg: radial-gradient(circle at top left, #ffffff 0%, #f4ede2 100%);
+  --shadow-soft: 0 14px 24px rgba(42, 42, 34, 0.08);
+  --shadow-strong: 0 20px 40px rgba(42, 42, 34, 0.08);
+  --accent-surface: #efe5cc;
+  --input-bg: #ffffff;
+  --band-bg: var(--surface-700);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
+  background-color: var(--surface-900);
+  color: inherit;
+}
+
+#root {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+a {
+  color: inherit;
 }
