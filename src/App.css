@@ -402,6 +402,39 @@
   align-items: center;
 }
 
+.partner-links {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.icon-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--card-border);
+  color: var(--accent-dark);
+  background: rgba(11, 95, 168, 0.08);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out,
+    color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.icon-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.icon-link:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-dark);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
+}
+
 .partner-photo {
   width: 72px;
   height: 72px;

@@ -19,7 +19,7 @@ function ContactSection() {
             <p>Share your requirement and we will respond within 24 hours.</p>
             <a
               className="button primary"
-              href="https://calendly.com/your-calendly"
+              href="https://calendly.com/varunbellutagi/30min"
             >
               Book via Calendly
             </a>
