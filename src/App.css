@@ -312,7 +312,14 @@
 }
 
 .grid.four {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.grid.four > * {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 260px;
 }
 
 .service-card,
