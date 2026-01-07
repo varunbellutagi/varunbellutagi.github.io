@@ -34,7 +34,7 @@ function ContactSection() {
           <div className="contact-card accent">
             <h3>Contact details</h3>
             <p>
-              📧 <a href="mailto:mpsvco@gmail.com">mpsvco@gmail.com</a>
+              📧 <a href="mailto:msvpco@gmail.com">msvpco@gmail.com</a>
             </p>
             <p>
               📞 <a href="tel:+919019715954">+91 9019715954</a> ·{' '}
