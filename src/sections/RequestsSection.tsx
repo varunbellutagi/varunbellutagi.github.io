@@ -1,6 +1,6 @@
 function RequestsSection() {
   return (
-    <section className="section alt">
+    <section className="section">
       <div className="section-header">
         <p className="eyebrow">Common requests</p>
         <h2>What clients ask us for most often</h2>

@@ -67,7 +67,7 @@ function ServicesSection() {
   >(null);
 
   return (
-    <section id="services" className="section">
+    <section id="services" className="section alt">
       <div className="section-header">
         <p className="eyebrow">Services</p>
         <h2>Structured services for individuals and companies</h2>

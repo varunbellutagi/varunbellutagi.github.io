@@ -38,6 +38,27 @@
   --accent-surface: #efe5cc;
   --input-bg: #ffffff;
   --band-bg: var(--surface-800);
+  /* Buttons */
+  --button-hover-shadow: 0 12px 24px rgba(201, 187, 124, 0.25);
+  /* Panels */
+  --panel-accent-gradient: linear-gradient(120deg, #f2e6cc, #c9bb7c);
+  --panel-accent-note: rgba(247, 242, 235, 0.65);
+  /* Cards */
+  --card-hover-shadow: 0 18px 28px rgba(9, 9, 0, 0.12);
+  /* Services */
+  --service-modal-overlay: rgba(9, 9, 9, 0.35);
+  --service-modal-shadow: 0 24px 40px rgba(9, 9, 0, 0.2);
+  --service-note-bg: rgba(201, 187, 124, 0.16);
+  --service-note-border: rgba(201, 187, 124, 0.3);
+  /* FAQ */
+  --faq-item-border: rgba(201, 187, 124, 0.3);
+  /* About */
+  --icon-link-bg: rgba(11, 95, 168, 0.08);
+  --partner-photo-gradient: linear-gradient(135deg, #f0e6d2, #efe8dc);
+  --partner-photo-border: rgba(201, 187, 124, 0.3);
+  --pill-bg: rgba(201, 187, 124, 0.22);
+  /* Contact */
+  --contact-note-muted: rgba(74, 71, 60, 0.7);
 }
 
 *,
@@ -63,5 +84,5 @@ img {
 }
 
 a {
-  color: inherit;
+  color: var(--link-color);
 }

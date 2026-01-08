@@ -9,8 +9,8 @@ function Home() {
   return (
     <main className="home">
       <HeroSection />
-      <RequestsSection />
       <ServicesSection />
+      <RequestsSection />
       <AboutSection />
       <CaseStudiesSection />
       <ContactSection />
