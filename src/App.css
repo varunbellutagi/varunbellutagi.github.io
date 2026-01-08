@@ -322,12 +322,120 @@
   min-width: 260px;
 }
 
+.grid.five {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
 .service-card,
 .case-card {
   padding: 2rem;
   border-radius: 20px;
   border: 1px solid var(--card-border);
   background: var(--card-bg);
+}
+
+.service-card.compact {
+  padding: 1.4rem 1.6rem;
+  text-align: center;
+}
+
+.service-card.compact h3 {
+  margin: 15;
+  font-size: 1.05rem;
+}
+
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.service-trigger {
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-trigger:hover {
+  transform: translateY(-4px);
+}
+
+.service-trigger:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 3px;
+}
+
+.service-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 9, 9, 0.35);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  padding: 1.5rem;
+}
+
+.service-modal {
+  width: min(480px, 100%);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 24px 40px rgba(9, 9, 0, 0.2);
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+.service-modal h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.service-modal-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.service-modal-list li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.service-modal-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-dark);
+}
+
+.service-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 1px solid var(--card-border);
+  background: var(--surface-900);
+  color: inherit;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.service-modal-close:hover {
+  border-color: var(--accent-dark);
 }
 
 .service-card:hover,
