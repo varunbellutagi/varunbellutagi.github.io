@@ -35,7 +35,7 @@
 }
 
 .hero-illustration-card {
-  width: min(420px, 100%);
+  width: min(680px, 100%);
   padding: 1.6rem;
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.35);
@@ -46,6 +46,12 @@
 }
 
 .hero-illustration-card svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-lottie {
   width: 100%;
   height: auto;
   display: block;
