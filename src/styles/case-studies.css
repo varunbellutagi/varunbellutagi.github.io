@@ -1,0 +1,10 @@
+.pill {
+  display: inline-flex;
+  margin-top: 1.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: var(--pill-bg);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}

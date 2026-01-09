@@ -1,0 +1,43 @@
+.service-card,
+.case-card,
+.blog-card,
+.request-card,
+.contact-card,
+.partner-card,
+.faq-group {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--card-text);
+}
+
+.service-card,
+.case-card,
+.blog-card {
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.request-card {
+  padding: 1.8rem;
+  border-radius: 20px;
+}
+
+.blog-card,
+.request-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.blog-card h3,
+.blog-card p {
+  margin: 0;
+}
+
+.service-card:hover,
+.case-card:hover,
+.partner-card:hover,
+.contact-card:hover {
+  border-color: var(--accent-dark);
+  box-shadow: var(--card-hover-shadow);
+}

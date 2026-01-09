@@ -1,0 +1,12 @@
+.cta-row {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cta-note {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
