@@ -107,8 +107,13 @@ function ServicesSection() {
             </button>
             <h3 id="service-modal-title">{activeService.title}</h3>
             <ul className="service-modal-list">
-              {activeService.items.map((item) => (
-                <li key={item}>{item}</li>
+              {activeService.items.map((item, index) => (
+                <li
+                  key={item}
+                  style={{ "--delay": `${0.05 + index * 0.05}s` } as React.CSSProperties}
+                >
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

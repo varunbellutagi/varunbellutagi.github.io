@@ -416,13 +416,35 @@
 .service-modal-list li {
   position: relative;
   padding-left: 1.2rem;
+  opacity: 0;
+  transform: translateX(-6px);
+  animation: service-item-in 0.35s ease-out forwards;
+  animation-delay: var(--delay, 0s);
 }
 
 .service-modal-list li::before {
-  content: '•';
+  content: '→';
   position: absolute;
   left: 0;
-  color: var(--accent-dark);
+  color: var(--surface-900);
+  transform: translateX(-4px);
+  opacity: 0;
+  animation: service-arrow-in 0.35s ease-out forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes service-item-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes service-arrow-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .service-modal-close {
