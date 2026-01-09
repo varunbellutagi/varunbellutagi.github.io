@@ -4,7 +4,7 @@ function AboutSection() {
       name: 'Varun Bellutagi',
       role: 'Chartered Accountant',
       bio: 'Expertise in the field of Income Tax including Income Tax Return filing, tax planning, advisory, handling tax notices and assessments, TDS compliance, and representation before tax authorities for individuals and businesses.',
-      image: 'public/varun.jpg',
+      image: '/varun.jpg',
       linkedin: 'https://www.linkedin.com/in/varun-bellutagi/',
       email: 'mailto:varunbellutagi@gmail.com',
     },
