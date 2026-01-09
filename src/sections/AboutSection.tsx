@@ -3,7 +3,7 @@ function AboutSection() {
     {
       name: 'Varun Bellutagi',
       role: 'Chartered Accountant',
-      bio: 'Focused on statutory audits, internal controls, and risk assessments for growing companies.',
+      bio: 'Expertise in the field of Income Tax including Income Tax Return filing, tax planning, advisory, handling tax notices and assessments, TDS compliance, and representation before tax authorities for individuals and businesses.',
       image: 'public/varun.jpg',
       linkedin: 'https://www.linkedin.com/in/varun-bellutagi/',
       email: 'mailto:varunbellutagi@gmail.com',
@@ -11,7 +11,7 @@ function AboutSection() {
     {
       name: 'Shashank Iyengar',
       role: 'Chartered Accountant',
-      bio: 'Specializes in tax planning, assessments, and high-value filings for individuals and founders.',
+      bio: 'Expertise in Ind AS/AS compliant accounting, ledger scrutiny, finalization of accounts, financial reporting, MIS reporting, cash flow management, financial analysis and planning, business advisory, and startup setup support.',
       image: '/partner-placeholder.png',
       linkedin: 'https://www.linkedin.com/',
       email: 'mailto:hello@msvpco.com',
@@ -19,7 +19,7 @@ function AboutSection() {
     {
       name: 'Manvitha Udupa',
       role: 'GST and compliance',
-      bio: 'Oversees GST registrations, returns, reconciliations, and compliance systems for businesses.',
+      bio: 'Expertise in GST consultancy and advisory, statutory audits including bank and company audits, internal audits, and stock audits',
       image: '/partner-placeholder.png',
       linkedin: 'https://www.linkedin.com/',
       email: 'mailto:hello@msvpco.com',
@@ -27,7 +27,7 @@ function AboutSection() {
     {
       name: 'Preethi Ramesh',
       role: 'Income Tax and Assessments',
-      bio: 'Builds reporting cadence, MIS dashboards, and financial structures that support decision-making.',
+      bio: 'Expert in handling Income Tax and GST assessments, Income Tax planning and return filing, statutory audits, internal audits, and concurrent audits.',
       image: '/partner-placeholder.png',
       linkedin: 'https://www.linkedin.com/',
       email: 'mailto:hello@msvpco.com',

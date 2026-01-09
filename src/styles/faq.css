@@ -1,0 +1,60 @@
+.faq-groups {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.faq-group {
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.faq-group h3 {
+  margin: 0 0 1.2rem;
+  font-family: var(--serif);
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-list details {
+  border-radius: 14px;
+  border: 1px solid var(--faq-item-border);
+  background: var(--surface-900);
+  padding: 0.9rem 1.1rem;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  position: relative;
+  padding-right: 1.6rem;
+  color: var(--text-primary);
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: '›';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--accent);
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.faq-list details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.faq-list p {
+  margin: 0.8rem 0 0;
+  color: var(--text-secondary);
+}

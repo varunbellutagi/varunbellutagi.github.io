@@ -1,0 +1,30 @@
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    gap: 0.8rem;
+  }
+
+  .nav-cta {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .contact-split {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    flex-direction: column;
+  }
+
+  .industry-band {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

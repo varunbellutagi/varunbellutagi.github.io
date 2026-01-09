@@ -1,0 +1,122 @@
+.partner-card {
+  padding: 2rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.partner-links {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+  justify-content: center;
+}
+
+.icon-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--button-border);
+  color: var(--button-text);
+  background: var(--button-bg);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out,
+    color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.icon-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.icon-link:hover {
+  color: var(--button-text);
+  border-color: var(--button-border);
+  box-shadow: var(--button-hover-shadow);
+  transform: translateY(-2px);
+}
+
+.partner-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: var(--partner-photo-gradient);
+  border: 1px solid var(--partner-photo-border);
+}
+
+.partner-role {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--card-text-muted);
+}
+
+.industry-band {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+}
+
+.industry-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.industry-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease-out;
+}
+
+.industry-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--pill-bg);
+}
+
+.industry-name::before {
+  content: '#';
+  margin-right: 0.2rem;
+  color: var(--accent-dark);
+}
+
+.industry-meta {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 0.5rem);
+  transform: translate(-50%, 6px);
+  padding: 0.45rem 0.7rem;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+  white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--card-text-secondary);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.industry-item:hover {
+  transform: translateY(-2px);
+}
+
+.industry-item:hover .industry-meta {
+  opacity: 1;
+  transform: translate(-50%, -2px);
+}

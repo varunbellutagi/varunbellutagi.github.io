@@ -1,0 +1,58 @@
+.contact {
+  background: var(--contact-bg);
+}
+
+.contact-card {
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.contact-card.accent {
+  background: var(--card-bg);
+  color: var(--card-text);
+}
+
+.contact-note {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--card-text-muted);
+}
+
+.contact-card.accent .contact-note {
+  color: var(--text-muted);
+}
+
+.contact-card a {
+  color: var(--card-text);
+}
+
+.contact-card a:hover {
+  color: var(--card-text-secondary);
+}
+
+.contact-card svg {
+  margin-right: 0.5rem;
+  color: var(--accent-dark);
+  vertical-align: -2px;
+}
+
+.contact-split {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  flex: 1;
+}
+
+.contact-info .contact-card {
+  flex: 1 1 220px;
+}
