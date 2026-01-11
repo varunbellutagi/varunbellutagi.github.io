@@ -9,8 +9,9 @@
     flex-direction: column;
   }
 
-  .industry-band {
+  .industry-list {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.8rem;
   }
 }

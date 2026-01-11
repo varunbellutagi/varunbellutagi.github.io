@@ -20,17 +20,17 @@ function AboutSection() {
       name: 'Manvitha Udupa',
       role: 'GST and compliance',
       bio: 'Expertise in GST consultancy and advisory, statutory audits including bank and company audits, internal audits, and stock audits',
-      image: '/partner-placeholder.png',
-      linkedin: 'https://www.linkedin.com/',
-      email: 'mailto:hello@msvpco.com',
+      image: '/manvitha.JPG',
+      linkedin: 'https://www.linkedin.com/in/manvitha-udupa-189a4318b',
+      email: 'mailto:manviudupa@gmail.com',
     },
     {
       name: 'Preethi Ramesh',
       role: 'Income Tax and Assessments',
       bio: 'Expert in handling Income Tax and GST assessments, Income Tax planning and return filing, statutory audits, internal audits, and concurrent audits.',
-      image: '/partner-placeholder.png',
-      linkedin: 'https://www.linkedin.com/',
-      email: 'mailto:hello@msvpco.com',
+      image: '/preethi.JPG',
+      linkedin: 'https://www.linkedin.com/in/preethi-ramesh',
+      email: 'mailto:preethialka2025@gmail.com',
     },
   ];
   const industries = [
