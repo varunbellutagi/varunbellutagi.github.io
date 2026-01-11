@@ -1,6 +1,6 @@
 function FaqSection() {
   return (
-    <section id="faq" className="section">
+    <section id="faq" className="section alt">
       <div className="section-header">
         <p className="eyebrow">FAQ</p>
         <h2>Clear answers for critical decisions</h2>

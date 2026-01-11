@@ -2,6 +2,8 @@
   color: var(--text-primary);
   background: var(--page-bg);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
