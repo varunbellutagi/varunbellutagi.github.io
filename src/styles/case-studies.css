@@ -13,7 +13,11 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(91, 192, 190, 0.35), transparent 55%);
+  background: radial-gradient(
+    circle at top right,
+    rgba(91, 192, 190, 0.35),
+    transparent 55%
+  );
   opacity: 0.6;
   pointer-events: none;
 }
@@ -33,25 +37,6 @@
   flex-direction: column;
   gap: 1.6rem;
   flex: 1;
-}
-
-.case-icon {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(11, 19, 43, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: grid;
-  place-items: center;
-}
-
-.case-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--card-text);
 }
 
 .case-card__header {
@@ -132,15 +117,28 @@
 
 .case-modal {
   width: min(780px, 100%);
+  max-height: 90vh;
+  max-height: 90dvh; /* Dynamic viewport height for mobile */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 24px;
-  padding: 2.4rem;
+  padding: clamp(1.2rem, 5vw, 2.4rem);
   position: relative;
   box-shadow: var(--service-modal-shadow);
-  display: grid;
-  gap: 1.6rem;
+  display: block; /* Changed from grid to block for better scrolling behavior */
   color: var(--card-text);
+}
+
+.case-modal::-webkit-scrollbar {
+  display: none;
+}
+
+.case-modal > * + * {
+  margin-top: 1.6rem;
 }
 
 .case-modal__header {
