@@ -74,15 +74,6 @@ const CASE_STUDIES = [
   },
 ];
 
-const CASE_ICONS: Record<string, string> = {
-  launch:
-    'M12 2l2.2 4.4L19 8.2l-4.3 3.2.9 5.3L12 14.8 7.4 16.7l.9-5.3L4 8.2l4.8-.8L12 2z',
-  briefcase:
-    'M7 6V4.5A2.5 2.5 0 0 1 9.5 2h5A2.5 2.5 0 0 1 17 4.5V6h3a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V8a2 2 0 0 1 2-2h3zm2 0h6V4.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0-.5.5V6z',
-  shield:
-    'M12 2l7 3v6c0 5-3.5 9.2-7 11-3.5-1.8-7-6-7-11V5l7-3z',
-};
-
 function CaseStudiesSection() {
   const [activeCase, setActiveCase] = useState<
     (typeof CASE_STUDIES)[number] | null
@@ -103,11 +94,6 @@ function CaseStudiesSection() {
             onClick={() => setActiveCase(item)}
           >
             <div className="case-card__content">
-              <span className="case-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d={CASE_ICONS[item.icon]} />
-                </svg>
-              </span>
               <header className="case-card__header">
                 <span className="case-tag">{item.tag}</span>
                 <h3>{item.title}</h3>
@@ -126,7 +112,18 @@ function CaseStudiesSection() {
           aria-label="Case study details"
           onClick={() => setActiveCase(null)}
         >
-          <div className="case-modal" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="case-modal"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              className="service-modal-close"
+              type="button"
+              aria-label="Close case study details"
+              onClick={() => setActiveCase(null)}
+            >
+              Close
+            </button>
             <div className="case-modal__grid">
               {activeCase.overview && (
                 <div className="case-block">
