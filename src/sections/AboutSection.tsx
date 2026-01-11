@@ -34,13 +34,13 @@ function AboutSection() {
     },
   ];
   const industries = [
-    { name: 'Manufacturing', meta: '5+ clients · 1+ yrs' },
-    { name: 'Technology', meta: '5+ clients · 1+ yrs' },
-    { name: 'Healthcare', meta: '5+ clients · 1+ yrs' },
-    { name: 'Logistics', meta: '5+ clients · 1+ yrs' },
-    { name: 'Financial Services', meta: '5+ clients · 1+ yrs' },
-    { name: 'Hospitality', meta: '5+ clients · 1+ yrs' },
-    { name: 'Education', meta: '5+ clients · 1+ yrs' },
+    { name: 'Manufacturing', meta: '2+ clients · 1+ yrs' },
+    { name: 'Technology', meta: '1+ clients · 1+ yrs' },
+    { name: 'Healthcare', meta: '3+ clients · 1+ yrs' },
+    { name: 'Logistics', meta: '1+ clients · 1+ yrs' },
+    { name: 'Financial Services', meta: '2+ clients · 1+ yrs' },
+    { name: 'Hospitality', meta: '3+ clients · 1+ yrs' },
+    { name: 'Education', meta: '1+ clients · 1+ yrs' },
   ];
 
   return (

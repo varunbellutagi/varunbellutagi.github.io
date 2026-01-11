@@ -25,8 +25,8 @@ function Layout() {
               <span className="brand-sub">Financial Consultants</span>
             </div>
           </div>
-          <button 
-            className="mobile-toggle" 
+          <button
+            className="mobile-toggle"
             onClick={toggleMenu}
             aria-label="Toggle navigation"
             aria-expanded={isMenuOpen}
@@ -38,16 +38,30 @@ function Layout() {
             </div>
           </button>
         </div>
-        
+
         <div className={`header-menu ${isMenuOpen ? 'open' : ''}`}>
           <nav className="nav">
-            <Link to="/" onClick={closeMenu}>Home</Link>
-            <a href="/#services" onClick={closeMenu}>Services</a>
-            <a href="/#about" onClick={closeMenu}>About</a>
-            <a href="/#case-studies" onClick={closeMenu}>Case Studies</a>
-            <Link to="/blog" onClick={closeMenu}>Blog</Link>
-            <Link to="/faq" onClick={closeMenu}>FAQ</Link>
-            <a href="/#contact" onClick={closeMenu}>Contact + Book</a>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+            <a href="/#services" onClick={closeMenu}>
+              Services
+            </a>
+            <a href="/#about" onClick={closeMenu}>
+              About
+            </a>
+            <a href="/#case-studies" onClick={closeMenu}>
+              Case Studies
+            </a>
+            <Link to="/blog" onClick={closeMenu}>
+              Blog
+            </Link>
+            <Link to="/faq" onClick={closeMenu}>
+              FAQ
+            </Link>
+            <a href="/#contact" onClick={closeMenu}>
+              Contact + Book
+            </a>
           </nav>
           <a className="nav-cta" href="/#contact" onClick={closeMenu}>
             Book a call
@@ -58,7 +72,7 @@ function Layout() {
       <Outlet />
 
       <footer className="site-footer">
-        <p>© 2024 MSVP and CO. Financial Consultants. All rights reserved.</p>
+        <p>© 2025 MSVP and CO. Financial Consultants. All rights reserved.</p>
         <div className="footer-links">
           <Link to="/blog">Blog</Link>
           <Link to="/faq">Policies</Link>
