@@ -28,26 +28,6 @@
   background-size: 100% 100%;
 }
 
-.button.ghost {
-  border: 1px solid var(--button-border);
-  color: var(--button-text);
-  background: transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--button-bg) 0%,
-    var(--button-bg) 100%
-  );
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-position: left;
-}
-
-.button.ghost:hover {
-  border-color: var(--button-border);
-  color: var(--button-text);
-  background-size: 100% 100%;
-}
-
 .text-link {
   color: var(--link-color);
   font-weight: 600;

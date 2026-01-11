@@ -1,15 +1,36 @@
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1.5rem clamp(1.5rem, 4vw, 4rem);
-  backdrop-filter: blur(14px);
+  z-index: 100;
   background: var(--header-bg);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--card-border);
+  padding: 0; /* Padding is now handled by children or different logic */
+}
+
+/* Container for Desktop Layout */
+@media (min-width: 901px) {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem clamp(1.5rem, 4vw, 4rem);
+  }
+
+  .header-bar {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-toggle {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 .brand {
@@ -87,9 +108,96 @@
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s ease-out;
+  white-space: nowrap;
 }
 
 .nav-cta:hover {
   transform: translateY(-2px);
   box-shadow: var(--button-hover-shadow);
+}
+
+/* Mobile Layout */
+@media (max-width: 900px) {
+  .site-header {
+    display: block;
+    padding: 1rem;
+  }
+
+  .header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-main);
+  }
+
+  /* Hamburger - "three dashed row wise line" */
+  .hamburger-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 30px;
+  }
+
+  .hamburger-lines span {
+    display: block;
+    width: 100%;
+    height: 0;
+    border-top: 2px solid currentColor;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* If they want actual blocks that are dashed, use border. 
+     "Three dashed row wise line" -> 3 lines, each is dashed? */
+
+  .header-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--card-border);
+    margin-top: 1rem;
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  .header-menu.open {
+    display: flex;
+  }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .nav-cta {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
