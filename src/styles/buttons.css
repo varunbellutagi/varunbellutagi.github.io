@@ -23,9 +23,33 @@
 }
 
 .button.primary:hover {
-  transform: translateY(-2px);
   box-shadow: var(--button-hover-shadow);
   background-size: 100% 100%;
+}
+
+/* Magnetic Button */
+.magnetic-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform;
+}
+
+.magnetic-button-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform;
+}
+
+.magnetic-button:hover {
+  /* Override default button hover transform */
+}
+
+.magnetic-button.button.primary:hover {
+  box-shadow: var(--button-hover-shadow);
 }
 
 .text-link {
