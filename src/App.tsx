@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import logoSrc from './assets/msvpcologo.svg';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import Faq from './pages/Faq';
-import Home from './pages/Home';
+
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const Faq = lazy(() => import('./pages/Faq'));
+const Home = lazy(() => import('./pages/Home'));
 
 function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -138,14 +139,16 @@ function Layout() {
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/faq" element={<Faq />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/faq" element={<Faq />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
