@@ -39,7 +39,7 @@ function AboutSection() {
     <section id="about" className="section alt">
       <div className="section-header">
         <p className="eyebrow">About</p>
-        <h2>Four partners, one shared standard of rigor</h2>
+        <h2>Three partners, one shared standard of rigor</h2>
       </div>
       <div className="partners-grid">
         {partners.map((partner) => (
