@@ -1,0 +1,298 @@
+/* =========================================
+   1. CONTAINER & GRID BACKGROUND
+   ========================================= */
+.bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  /* Custom Properties for JS effects (optional) */
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+}
+
+/* Base grid pattern */
+.bg-animation-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(11, 19, 43, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 19, 43, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* Magnified grid effect */
+.bg-animation-grid-magnify {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(91, 192, 190, 0.4) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(91, 192, 190, 0.4) 2px, transparent 2px);
+  background-size: 100px 100px;
+  pointer-events: none;
+  --cursor-x: 0px;
+  --cursor-y: 0px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  mask-image: radial-gradient(
+    circle 180px at var(--cursor-x) var(--cursor-y),
+    black 0%,
+    black 30%,
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 180px at var(--cursor-x) var(--cursor-y),
+    black 0%,
+    black 30%,
+    transparent 70%
+  );
+}
+
+.bg-animation-grid-magnify.active {
+  opacity: 1;
+}
+
+/* =========================================
+   2. ICONS: BASE STYLES & INTERACTION
+   ========================================= */
+.bg-animation-icon {
+  position: absolute;
+  color: rgba(11, 19, 43, 0.25);
+  user-select: none;
+  will-change: transform;
+  pointer-events: auto;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    filter 0.3s ease;
+  /* Default animation settings - overridden by specific classes below */
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.bg-animation-icon:hover {
+  color: var(--accent); /* Ensure --accent is defined in your root CSS */
+  filter: drop-shadow(0 0 8px rgba(91, 192, 190, 0.6))
+    drop-shadow(0 0 20px rgba(91, 192, 190, 0.4));
+  animation-play-state: paused; /* Pauses floating when hovering */
+}
+
+/* =========================================
+   3. ANIMATION KEYFRAMES
+   ========================================= */
+/* Standard up/down float */
+@keyframes float-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Special float for centered elements (preserves -50% translate) */
+@keyframes float-gentle-centered {
+  0%,
+  100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(calc(-50% - 20px));
+  }
+}
+
+/* Float with slight rotation */
+@keyframes float-rotate {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+}
+
+/* Float with slight scaling */
+@keyframes float-scale {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+/* =========================================
+   4. ICON POSITIONS (SYMMETRICAL LAYOUT)
+   ========================================= */
+
+/* --- PAIR 1: Top Outer Corners --- */
+.bg-animation-icon.icon-1 {
+  top: 10%;
+  left: 5%;
+  font-size: 2.8rem;
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+
+.bg-animation-icon.icon-2 {
+  top: 10%;
+  right: 5%;
+  font-size: 2.8rem;
+  animation-duration: 6.5s;
+  animation-delay: 1s;
+}
+
+/* --- PAIR 2: Middle Vertical Edges (Vertically Centered) --- */
+.bg-animation-icon.icon-3 {
+  top: 50%;
+  left: 3%;
+  font-size: 2.4rem;
+  /* Must use centered keyframe to keep vertical alignment */
+  transform: translateY(-50%);
+  animation-name: float-gentle-centered;
+  animation-duration: 7s;
+  animation-delay: 1.5s;
+}
+
+.bg-animation-icon.icon-4 {
+  top: 50%;
+  right: 3%;
+  font-size: 2.4rem;
+  /* Must use centered keyframe to keep vertical alignment */
+  transform: translateY(-50%);
+  animation-name: float-gentle-centered;
+  animation-duration: 6s;
+  animation-delay: 2.5s;
+}
+
+/* --- PAIR 3: Bottom Outer Corners --- */
+.bg-animation-icon.icon-5 {
+  bottom: 10%;
+  left: 5%;
+  font-size: 2.6rem;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.bg-animation-icon.icon-6 {
+  bottom: 10%;
+  right: 5%;
+  font-size: 2.6rem;
+  animation-duration: 7.5s;
+  animation-delay: 0.5s;
+}
+
+/* --- PAIR 4: Upper Inner (Rotating Float) --- */
+.bg-animation-icon.icon-7 {
+  top: 25%;
+  left: 20%;
+  font-size: 2rem;
+  animation-name: float-rotate;
+  animation-duration: 9s;
+  animation-delay: 0s;
+}
+
+.bg-animation-icon.icon-8 {
+  top: 25%;
+  right: 20%;
+  font-size: 2rem;
+  animation-name: float-rotate;
+  animation-duration: 8.5s;
+  animation-delay: 1.5s;
+}
+
+/* --- PAIR 5: Lower Inner (Rotating Float) --- */
+.bg-animation-icon.icon-9 {
+  bottom: 25%;
+  left: 20%;
+  font-size: 2rem;
+  animation-name: float-rotate;
+  animation-duration: 8s;
+  animation-delay: 0.5s;
+}
+
+.bg-animation-icon.icon-10 {
+  bottom: 25%;
+  right: 20%;
+  font-size: 2rem;
+  animation-name: float-rotate;
+  animation-duration: 9.5s;
+  animation-delay: 2s;
+}
+
+/* --- PAIR 6: Deep Background (Scaling Float) --- */
+.bg-animation-icon.icon-11 {
+  top: 5%;
+  left: 50%;
+  font-size: 1.8rem;
+  opacity: 0.7;
+  animation-name: float-scale;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+.bg-animation-icon.icon-12 {
+  bottom: 10%;
+  right: 50%;
+  font-size: 1.8rem;
+  opacity: 0.7;
+  animation-name: float-scale;
+  animation-duration: 11s;
+  animation-delay: 3s;
+}
+
+/* =========================================
+   5. RESPONSIVE ADJUSTMENTS
+   ========================================= */
+@media (max-width: 768px) {
+  .bg-animation-icon {
+    font-size: 1.6rem !important;
+  }
+
+  /* Hide middle/inner icons on mobile to prevent clutter */
+  .bg-animation-icon.icon-3,
+  .bg-animation-icon.icon-4,
+  .bg-animation-icon.icon-7,
+  .bg-animation-icon.icon-8,
+  .bg-animation-icon.icon-11,
+  .bg-animation-icon.icon-12 {
+    display: none;
+  }
+
+  /* Keep only the 4 corner icons for clean mobile view */
+  .bg-animation-icon.icon-1,
+  .bg-animation-icon.icon-2,
+  .bg-animation-icon.icon-5,
+  .bg-animation-icon.icon-6,
+  .bg-animation-icon.icon-9,
+  .bg-animation-icon.icon-10 {
+    display: block;
+    opacity: 0.5; /* Slightly fainter on mobile */
+  }
+
+  .bg-animation-grid {
+    background-size: 40px 40px;
+  }
+
+  .bg-animation-grid-magnify {
+    display: none;
+  }
+}

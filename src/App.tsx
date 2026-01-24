@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
+import logoSrc from './assets/msvpcologo.svg';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Faq from './pages/Faq';
@@ -17,9 +18,7 @@ function Layout() {
       <header className="site-header">
         <div className="header-bar">
           <div className="brand">
-            <div className="brand-mark" aria-hidden="true">
-              MSVP
-            </div>
+            <img src={logoSrc} className="site-logo" alt="MSVP and CO Logo" />
             <div className="brand-text">
               <span className="brand-name">MSVP and CO</span>
               <span className="brand-sub">Financial Consultants</span>
@@ -73,22 +72,6 @@ function Layout() {
 
       <footer className="site-footer">
         <div className="footer-content">
-          <div className="footer-brand">
-            <div className="brand">
-              <div className="brand-mark" aria-hidden="true">
-                MSVP
-              </div>
-              <div className="brand-text">
-                <span className="brand-name">MSVP and CO</span>
-                <span className="brand-sub">Financial Consultants</span>
-              </div>
-            </div>
-            <p className="footer-tagline">
-              Compliance, clarity, and confident decisions for your financial
-              future.
-            </p>
-          </div>
-
           <div className="footer-nav">
             <div className="footer-col">
               <h4>Company</h4>

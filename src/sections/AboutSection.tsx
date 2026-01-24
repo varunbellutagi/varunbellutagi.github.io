@@ -9,14 +9,6 @@ function AboutSection() {
       email: 'mailto:varunbellutagi@gmail.com',
     },
     {
-      name: 'Shashank Iyengar',
-      role: 'Chartered Accountant',
-      bio: 'Expertise in Ind AS/AS compliant accounting, ledger scrutiny, finalization of accounts, financial reporting, MIS reporting, cash flow management, financial analysis and planning, business advisory, and startup setup support.',
-      image: '/partner-placeholder.png',
-      linkedin: 'https://www.linkedin.com/',
-      email: 'mailto:hello@msvpco.com',
-    },
-    {
       name: 'Manvitha Udupa',
       role: 'GST and compliance',
       bio: 'Expertise in GST consultancy and advisory, statutory audits including bank and company audits, internal audits, and stock audits',
@@ -49,7 +41,7 @@ function AboutSection() {
         <p className="eyebrow">About</p>
         <h2>Four partners, one shared standard of rigor</h2>
       </div>
-      <div className="grid four">
+      <div className="partners-grid">
         {partners.map((partner) => (
           <article className="partner-card" key={partner.name}>
             <img
