@@ -1,7 +1,6 @@
 import BackgroundAnimation from './BackgroundAnimation';
 import Typewriter from '../components/Typewriter';
 import CountUp from '../components/CountUp';
-import MagneticButton from '../components/MagneticButton';
 
 const rotatingWords = [
   'Strategic Growth.',
@@ -34,20 +33,12 @@ function HeroSection() {
           responsiveness, and long-term value.
         </p>
         <div className="hero-actions">
-          <MagneticButton
-            href="/#contact"
-            className="button primary"
-            strength={0.35}
-          >
+          <a href="/#contact" className="button primary">
             Book a call
-          </MagneticButton>
-          <MagneticButton
-            href="/#services"
-            className="button secondary"
-            strength={0.3}
-          >
+          </a>
+          <a href="/#services" className="button secondary">
             Explore services
-          </MagneticButton>
+          </a>
         </div>
       </div>
       <div className="hero-stats">

@@ -14,3 +14,8 @@
 @import url('./styles/contact.css');
 @import url('./styles/footer.css');
 @import url('./styles/responsive.css');
+
+.site-logo {
+  height: 40px;
+  width: auto;
+}
