@@ -70,20 +70,9 @@
   color: rgba(11, 19, 43, 0.25);
   user-select: none;
   will-change: transform;
-  pointer-events: auto;
-  cursor: pointer;
-  transition:
-    color 0.3s ease,
-    filter 0.3s ease;
+  pointer-events: none;
   /* Default animation settings - overridden by specific classes below */
   animation: float-gentle 6s ease-in-out infinite;
-}
-
-.bg-animation-icon:hover {
-  color: var(--accent); /* Ensure --accent is defined in your root CSS */
-  filter: drop-shadow(0 0 8px rgba(91, 192, 190, 0.6))
-    drop-shadow(0 0 20px rgba(91, 192, 190, 0.4));
-  animation-play-state: paused; /* Pauses floating when hovering */
 }
 
 /* =========================================

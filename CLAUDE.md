@@ -22,7 +22,7 @@ npm run preview  # Preview production build locally
 ## Architecture
 
 ### Routing & Layout
-`App.tsx` contains the `Layout` component (header/footer wrapper) and route definitions. Routes use React Router's nested layout pattern with `<Outlet />`.
+`App.tsx` contains the `Layout` component (header/footer wrapper) and route definitions. Routes use React Router's nested layout pattern with `<Outlet />`. Pages are lazy-loaded with `React.lazy()` and wrapped in `<Suspense>`.
 
 **Routes:**
 - `/` → Home (single-page with sections)
@@ -31,8 +31,9 @@ npm run preview  # Preview production build locally
 - `/faq` → FAQ page
 
 ### Component Organization
-- **`src/pages/`** - Route-level page components
-- **`src/sections/`** - Reusable section components (HeroSection, ServicesSection, AboutSection, ContactSection, CaseStudiesSection, RequestsSection, FaqSection)
+- **`src/pages/`** - Route-level page components (lazy-loaded)
+- **`src/sections/`** - Page section components (HeroSection, ServicesSection, AboutSection, ContactSection, CaseStudiesSection, RequestsSection, FaqSection, BackgroundAnimation)
+- **`src/components/`** - Reusable UI components (CountUp, Typewriter)
 - **`src/styles/`** - Modular CSS files organized by feature (not component-scoped modules)
 - **`src/utils/`** - Utilities (blog post parsing)
 
@@ -51,12 +52,12 @@ authorLinkedIn: "https://linkedin.com/in/..."
 Content here...
 ```
 
-Posts are loaded via Vite's `import.meta.glob()` with eager loading. Custom frontmatter parser in `src/utils/blog.ts` - no external YAML library at runtime.
+Posts are loaded via Vite's `import.meta.glob()` with eager loading. Custom frontmatter parser in `src/utils/blog.ts` handles YAML parsing at build time.
 
 ### Styling Approach
 - CSS custom properties defined in `src/index.css` for design tokens
 - Key colors: `--ink-900: #0b132b` (dark), `--accent: #5bc0be` (teal)
-- Fonts: Cormorant Garamond (headings), Work Sans (body)
+- Fonts: Cormorant Garamond (headings via `--serif`), Work Sans (body)
 - Responsive design uses CSS `clamp()` and media queries in `src/styles/responsive.css`
 
 ## Deployment

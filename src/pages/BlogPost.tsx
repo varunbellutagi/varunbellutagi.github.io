@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -6,6 +7,10 @@ import { getPostBySlug } from '../utils/blog';
 function BlogPost() {
   const { slug } = useParams();
   const post = slug ? getPostBySlug(slug) : null;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [slug]);
 
   if (!post) {
     return (

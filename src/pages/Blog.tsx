@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllPosts } from '../utils/blog';
 
 function Blog() {
   const posts = getAllPosts();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
 
   return (
     <main className="blog">
@@ -23,7 +28,7 @@ function Blog() {
               <div className="blog-meta">{post.date}</div>
               <h3>{post.title}</h3>
               <p>{post.excerpt}</p>
-              <Link className="text-link" to={`/blog/${post.slug}`}>
+              <Link className="text-link-read-more" to={`/blog/${post.slug}`}>
                 Read more
               </Link>
             </article>
