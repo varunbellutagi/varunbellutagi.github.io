@@ -2,11 +2,11 @@ import { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import logoSrc from './assets/msvpcologo.svg';
+import Home from './pages/Home';
 
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Faq = lazy(() => import('./pages/Faq'));
-const Home = lazy(() => import('./pages/Home'));
 
 function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,9 @@ function Layout() {
       <header className="site-header">
         <div className="header-bar">
           <div className="brand">
-            <img src={logoSrc} className="site-logo" alt="MSVP and CO Logo" />
+            <Link to="/">
+              <img src={logoSrc} className="site-logo" alt="MSVP and CO Logo" />
+            </Link>
             <div className="brand-text">
               <span className="brand-name">MSVP and CO</span>
               <span className="brand-sub">Financial Consultants</span>
@@ -41,9 +43,9 @@ function Layout() {
 
         <div className={`header-menu ${isMenuOpen ? 'open' : ''}`}>
           <nav className="nav">
-            <Link to="/" onClick={closeMenu}>
+            <a href="/#home" onClick={closeMenu}>
               Home
-            </Link>
+            </a>
             <a href="/#services" onClick={closeMenu}>
               Services
             </a>
@@ -59,9 +61,6 @@ function Layout() {
             <Link to="/faq" onClick={closeMenu}>
               FAQ
             </Link>
-            <a href="/#contact" onClick={closeMenu}>
-              Contact + Book
-            </a>
           </nav>
           <a className="nav-cta" href="/#contact" onClick={closeMenu}>
             Book a call
@@ -76,7 +75,7 @@ function Layout() {
           <div className="footer-nav">
             <div className="footer-col">
               <h4>Company</h4>
-              <Link to="/">Home</Link>
+              <a href="/#home">Home</a>
               <a href="/#about">About Us</a>
               <a href="/#services">Services</a>
               <a href="/#case-studies">Case Studies</a>
@@ -139,16 +138,35 @@ function Layout() {
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/faq" element={<Faq />} />
-          </Route>
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/blog"
+            element={
+              <Suspense fallback={null}>
+                <Blog />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/:slug"
+            element={
+              <Suspense fallback={null}>
+                <BlogPost />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/faq"
+            element={
+              <Suspense fallback={null}>
+                <Faq />
+              </Suspense>
+            }
+          />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

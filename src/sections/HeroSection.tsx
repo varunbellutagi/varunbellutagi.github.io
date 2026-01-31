@@ -15,7 +15,6 @@ function HeroSection() {
     <section id="home" className="hero">
       <BackgroundAnimation />
       <div className="hero-content">
-        <span className="hero-badge">Financial Consultants</span>
         <h1>
           <span className="hero-highlight">
             {' '}
@@ -58,7 +57,7 @@ function HeroSection() {
         <div className="hero-stat-divider" />
         <div className="hero-stat">
           <span className="stat-value">
-            <CountUp end={24} duration={1800} suffix="h" />
+            <CountUp prefix="<" end={24} duration={1800} suffix="h" />
           </span>
           <span className="stat-label">Response Time</span>
         </div>

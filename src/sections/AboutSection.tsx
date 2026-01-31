@@ -16,14 +16,6 @@ function AboutSection() {
       linkedin: 'https://www.linkedin.com/in/manvitha-udupa-189a4318b',
       email: 'mailto:manviudupa@gmail.com',
     },
-    {
-      name: 'Preethi Ramesh',
-      role: 'Income Tax and Assessments',
-      bio: 'Expert in handling Income Tax and GST assessments, Income Tax planning and return filing, statutory audits, internal audits, and concurrent audits.',
-      image: '/preethi.JPG',
-      linkedin: 'https://www.linkedin.com/in/preethi-ramesh',
-      email: 'mailto:preethialka2025@gmail.com',
-    },
   ];
   const industries = [
     { name: 'Manufacturing', meta: '2+ clients · 1+ yrs' },
@@ -39,7 +31,7 @@ function AboutSection() {
     <section id="about" className="section alt">
       <div className="section-header">
         <p className="eyebrow">About</p>
-        <h2>Three partners, one shared standard of rigor</h2>
+        <h2>Trusted expertise, dedicated to your success</h2>
       </div>
       <div className="partners-grid">
         {partners.map((partner) => (

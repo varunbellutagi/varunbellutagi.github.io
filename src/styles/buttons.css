@@ -44,10 +44,6 @@
   will-change: transform;
 }
 
-.magnetic-button:hover {
-  /* Override default button hover transform */
-}
-
 .magnetic-button.button.primary:hover {
   box-shadow: var(--button-hover-shadow);
 }
@@ -59,5 +55,19 @@
   text-decoration-color: var(--link-accent);
   text-decoration-thickness: 2px;
   text-underline-offset: 0.18em;
-  transition: color 0.2s ease-out, text-decoration-color 0.2s ease-out;
+  transition:
+    color 0.2s ease-out,
+    text-decoration-color 0.2s ease-out;
+}
+
+.text-link-read-more {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--link-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 0.2s ease-out,
+    text-decoration-color 0.2s ease-out;
 }

@@ -75,11 +75,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   background-color: var(--surface-900);
   color: inherit;
+}
+
+/* Offset for sticky header when navigating to sections */
+section[id] {
+  scroll-margin-top: 100px;
 }
 
 #root {
