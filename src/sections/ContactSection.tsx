@@ -4,7 +4,6 @@ import {
   FaLinkedin,
   FaMapMarkerAlt,
   FaPhone,
-  FaYoutube,
 } from 'react-icons/fa';
 
 function ContactSection() {
