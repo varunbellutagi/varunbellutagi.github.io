@@ -32,7 +32,8 @@ function ContactSection() {
             Book via Calendly
           </a>
           <p className="contact-subtext">
-            * Documents will be collected only after the first call. No commitment required.
+            * Documents will be collected only after the first call. No
+            commitment required.
           </p>
         </div>
 
@@ -77,7 +78,7 @@ function ContactSection() {
 
           <div className="social-row">
             <a
-              href="https://www.linkedin.com/in/varun-bellutagi/"
+              href="https://www.linkedin.com/company/msvpco/"
               className="social-link"
               aria-label="LinkedIn"
               target="_blank"
@@ -86,22 +87,13 @@ function ContactSection() {
               <FaLinkedin size={20} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/msvp.co?igsh=MWk1ZHVscGU1NWlpaQ=="
               className="social-link"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram size={20} />
-            </a>
-            <a
-              href="https://youtube.com"
-              className="social-link"
-              aria-label="YouTube"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube size={20} />
             </a>
           </div>
         </div>
